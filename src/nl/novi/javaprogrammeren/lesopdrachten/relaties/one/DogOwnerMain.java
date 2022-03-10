@@ -26,11 +26,11 @@ public class DogOwnerMain {
 
         mariska.setDog(bubbels);
 
-        mariska.toString();
+        System.out.println(mariska);
 
         mariska.dogBirthday();
 
-        mariska.toString();
+        System.out.println(mariska);
 
 
     }

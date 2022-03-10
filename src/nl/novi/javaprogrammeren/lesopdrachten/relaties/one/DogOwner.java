@@ -37,9 +37,7 @@ public class DogOwner {
 
     @Override
     public String toString() {
-        String returnValue = this.name + " heeft een " + dog.getSex() + ", deze is " + dog.getAge() + " jaar oud en van het soort: " + dog.getSpecies() + ". De hond heet: " + dog.getName();
-        System.out.println(returnValue);
-        return returnValue;
+        return this.name + " heeft een " + dog.getSex() + ", deze is " + dog.getAge() + " jaar oud en van het soort: " + dog.getSpecies() + ". De hond heet: " + dog.getName();
     }
 
 }
