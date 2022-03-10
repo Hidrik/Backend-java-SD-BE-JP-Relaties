@@ -20,6 +20,17 @@ public class DogOwnerMain {
      */
 
     public static void main(String[] args) {
+        DogOwner mariska = new DogOwner("Mariska", "Vrouw");
+
+        Dog bubbels = new Dog("Bubbels", "Amerikaanse Stafford", 2, "Vrouwtje");
+
+        mariska.setDog(bubbels);
+
+        mariska.toString();
+
+        mariska.dogBirthday();
+
+        mariska.toString();
 
 
     }
