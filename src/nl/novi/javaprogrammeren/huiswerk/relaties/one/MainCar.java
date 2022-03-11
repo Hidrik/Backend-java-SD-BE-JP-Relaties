@@ -25,5 +25,47 @@ public class MainCar {
      */
     public static void main(String[] args) {
 
+        CarDealer carDealer = new CarDealer();
+        CarOwner carOwner = new CarOwner("Hidrik", 22);
+        CarOwner toYoungCarOwner = new CarOwner("Hugo", 6);
+
+
+        Car peugeot = new Car("12-34-56", "Peugeot", "208", 61000L);
+
+
+        Car opel = new Car("12-34-56", "Opel", "Astra", 150000L);
+
+
+        Car audi = new Car("65-43-21", "Audi", "R8", 61000L);
+
+        //Kan deze auto gewoon toevoegen!
+        carDealer.addCar(peugeot);
+
+        //Kan deze auto niet toevoegen want het kenteken bestaat al!
+        carDealer.addCar(opel);
+
+        //Kan deze auto gewoon toevoegen
+        carDealer.addCar(audi);
+
+        //carOwner heeft nu auto Peugeot
+        carDealer.soldCar(peugeot, carOwner);
+
+        //carOwner heeft al een auto met dit kenteken!
+        carOwner.addCar(opel);
+
+        //carDealer heeft deze auto niet meer!
+        carDealer.soldCar(peugeot, carOwner);
+
+        //toYoungCarOwner is te jong om een auto te kopen!
+        carDealer.soldCar(audi, toYoungCarOwner);
+
+        for (Car ownedCar : carOwner.getOwnedCars()) {
+            System.out.println("De carOwner heeft deze auto's: " + ownedCar.getMerk() + " " + ownedCar.getSubtype() + ". ");
+        }
+
+        for (Car ownedCar : carDealer.getCars()) {
+            System.out.println("De carDealer heeft deze auto's: " + ownedCar.getMerk() + " " + ownedCar.getSubtype() + ". ");
+        }
+
     }
 }

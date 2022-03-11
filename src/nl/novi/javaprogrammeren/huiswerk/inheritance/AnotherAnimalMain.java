@@ -1,5 +1,12 @@
 package nl.novi.javaprogrammeren.huiswerk.inheritance;
 
+import nl.novi.javaprogrammeren.lesopdrachten.inheritance.one.Animal;
+import nl.novi.javaprogrammeren.lesopdrachten.inheritance.one.PetAnimal;
+import nl.novi.javaprogrammeren.lesopdrachten.inheritance.one.WildAnimal;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class AnotherAnimalMain {
 
     // LET OP: het eerste gedeelte is hetzelfde als de klassikale opdracht.
@@ -45,8 +52,35 @@ public class AnotherAnimalMain {
     Er zijn hier meerdere oplossingen mogelijk. Bijna allemaal zijn ze goed, zolang je jouw oplossing maar kan
     beargumenteren.
      */
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        List<AnotherAnimal> animals = new ArrayList<>();
+
+
+
+        AnotherWildAnimal lion = new AnotherWildAnimal("Peter", "Mannetje", "Brult", "Leeuwen-den", "Woensdag", "Nambia");
+        lion.setChildrenCount(5);
+        animals.add(lion);
+
+        AnotherWildAnimal tiger = new AnotherWildAnimal("Pieter", "Mannetje", "Brult", "Tijger-hol", "Maandag", "Zimbabwe");
+        tiger.setStripeCount(30);
+        animals.add(tiger);
+
+        AnotherWildAnimal wolf = new AnotherWildAnimal("Mariska", "Vrouwtje", "Huilt", "Wolvenhok", "Donderdag", "Nederland");
+        wolf.setPackName("Mariska's roedel");
+        animals.add(wolf);
+
+        AnotherPetAnimal cat = new AnotherPetAnimal("Oreo", "Vrouwtje", "Miauwt", "Mariska", "Vlees", "Lapjeskat");
+        cat.setTypeOfCat("Binnen");
+        animals.add(cat);
+
+        AnotherPetAnimal dog = new AnotherPetAnimal("Bubbels", "Mannetje", "Blaft", "Mariska", "Brokjes", "Amerikaanse Stafford");
+        animals.add(dog);
+
+        dog.move();
+        dog.makeNoise();
+        wolf.makeNoise();
+        wolf.move();
     }
 
 }
